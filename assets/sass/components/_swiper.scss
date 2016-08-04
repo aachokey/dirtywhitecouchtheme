@@ -1,0 +1,19 @@
+.swiper-container {
+    width: 100%;
+    height: 60vh;
+}
+
+@media only screen and (max-width: 624px) {
+	.swiper-container {
+		width:100vw;
+		margin-left: -45px;
+	}
+	.swiper-button-next {
+		right: 25px;
+	}
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}

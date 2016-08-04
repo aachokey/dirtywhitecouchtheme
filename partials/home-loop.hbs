@@ -1,0 +1,43 @@
+{{! This is the post loop - each post will be output using this markup }}
+<article class="{{post_class}} clearfix shadowbox	">
+<div class="section-title"><h3>Our blog</h3></div>
+
+        <div class="col-2-3">
+			<h5>MOST RECENT POST</h5>
+			<hr>
+		</div>
+        <div class="col-1-3 mobile-hide">
+			<h5>OTHER POSTS</h5>
+			<hr>
+        </div>
+
+
+	{{#foreach posts}}
+		{{#has tag="Blog"}}
+			{{#if @first}}
+				<div class="col-2-3 overlap-top">
+				    <header class="post-header">
+				        <h3 class="post-title"><a href="{{url}}">{{{title}}}</a></h3>
+				        {{#author}}
+				            <i><p>By <a href="{{url}}" class="author">{{name}}</a> on <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time></p></i>
+				        {{/author}}
+				    </header>
+				    <p>{{excerpt words="45"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+				</div>
+
+			{{else}}
+				<div class="col-1-3 side-post mobile-hide">
+				    <header class="post-header">
+				        <h6 class="post-title"><a href="{{url}}">{{{title}}}</a></h6>
+				        {{#author}}
+				            <i><p>By <a href="{{url}}" class="author">{{name}}</a> on <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time></p></i>
+				        {{/author}}
+				    </header>
+				    <p>{{excerpt words="15"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+				</div>
+			{{/if}}
+		{{/has}}
+	{{/foreach}}
+</article>
+<section class="shadowbox-left"><center><a class="btn" href="/tag/blog/">VISIT OUR BLOG</a></center></section>
+

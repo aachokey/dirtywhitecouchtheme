@@ -1,0 +1,164 @@
+{{!< default}}
+
+{{! This is a the custom "Studio" page template explaining the studio.}}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}	
+<header class="main-header tag-head {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <div class="vertical">
+        <div class="main-header-content inner">
+          {{> navigation}}
+        </div>
+    </div>
+</header>
+<main class="content overlap-top" role="main">
+<article class="{{post_class}} shadowbox">
+    <div class="post-header text-center">
+        <h3 class="post-title" style="color:#f79766">The Studio</h3>
+        <p>elis por molorem quid ut as non rerum endelec tatur, consedis ra quiaturiam, cum eium vo-Explitam, cuptus, temolendit, occae quos reriam vit harchil magniscimus. illique sunt lantibus eium laut perspe sum quod magnis et aborrum quaernatur? Qui num re nos doluptam ute re et autem et dolut explist lab il iditatu riandam que voluptatur, ut que</p>
+    </div>
+
+<section class="post-content">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url({{asset "images/mixer1.jpg"}})"></div>
+            <div class="swiper-slide" style="background-image: url({{asset "images/drums1.jpg"}})"></div>
+            <div class="swiper-slide" style="background-image: url({{asset "images/piano1.jpg"}})"></div>
+        </div>
+        <!-- Navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <br>
+	<h5>OUR GEAR</h5>
+    <hr />
+
+  <div class="card">
+      <div class="card-head">
+        <div class="card-image">
+          <img src="{{asset "images/Icon_Mixer.png"}}">
+        </div>
+
+        <div class="card-info">
+          <h4 class="card-title">The Mixer</h4>
+          <p class="mobile-hide">This is going to explain what the gear does and what it is commonly used for.</p>
+        </div>
+
+        <span class="card-action" id="togglebtn">
+          <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+        </span>
+      </div>
+      <div class="card-content">
+      <h5>What we have:</h5>
+        <p>Focusrite/Avid Control 24</p>
+      </div>
+  </div>
+
+  <div class="card">
+      <div class="card-head">
+        <div class="card-image">
+          <img src="{{asset "images/Icon_Speaker.png"}}">
+        </div>
+
+        <div class="card-info">
+          <h4 class="card-title">Monitors</h4>
+          <p class="mobile-hide">This is going to explain what the gear does and what it is commonly used for.</p>
+        </div>
+
+        <span class="card-action" id="togglebtn">
+          <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+        </span>
+      </div>
+      <div class="card-content">
+          <h5>What we have:</h5>
+          <p>JBL LSR 6823P with subwoofer</p>
+          <p>JBL LSR</p>
+          <p>Yamaha NS10m</p>
+      </div>
+  </div>
+
+  <div class="card">
+      <div class="card-head">
+        <div class="card-image">
+          <img src="{{asset "images/Icon_Microphone.png"}}">
+        </div>
+
+        <div class="card-info">
+          <h4 class="card-title">Recorders</h4>
+          <p class="mobile-hide">This is going to explain what the gear does and what it is commonly used for.</p>
+        </div>
+
+        <span class="card-action" id="togglebtn">
+          <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+        </span>
+      </div>
+      <div class="card-content">
+        <h5>What we have:</h5>
+          <p>Pro Tools HD Native, 10/11/12</p>
+          <p>Alesis HD24XR Hard Disk</p> 
+          <p>Panasonic SV-3700 DAT</p> 
+          <p>Fostex A-8 ¼” 8 Track</p>
+          <p>Alesis ADAT-2ea</p>
+          <p>Avid HD 16 IO</p>
+      </div>
+  </div>
+
+  <div class="card">
+      <div class="card-head">
+        <div class="card-image">
+          <img src="{{asset "images/Icon_Cable.png"}}">
+        </div>
+
+        <div class="card-info">
+          <h4 class="card-title">Outboard</h4>
+          <p class="mobile-hide">This is going to explain what the gear does and what it is commonly used for.</p>
+        </div>
+
+        <span class="card-action" id="togglebtn">
+          <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+        </span>
+      </div>
+      <div class="card-content">
+        <h5>What we have:</h5>
+           <p>Warm Audio 1176 comp</p>
+           <p>Valley People-Dyna Mite</p>
+           <p>DBX compressors</p>
+           <p>Aphex EXBB550 exciter</p>
+           <p>Aphex CX550 Comp</p>
+           <p>Multiple Lexicon Reverbs</p>
+      </div>
+  </div>
+
+  <div class="card">
+      <div class="card-head">
+        <div class="card-image">
+          <img src="{{asset "images/Icon_Preamp.png"}}">
+        </div>
+
+        <div class="card-info">
+          <h4 class="card-title">Preamps</h4>
+          <p class="mobile-hide">This is going to explain what the gear does and what it is commonly used for.</p>
+        </div>
+
+        <span class="card-action" id="togglebtn">
+          <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+        </span>
+      </div>
+      <div class="card-content">
+      <h5>What we have:</h5>
+           <p>John Hardy M2 with 4 channels</p>
+           <p>Neve 9098 pre with EQ</p>
+           <p>Universal Audio LA610 tube</p>
+           <p>Warm Audio Tone Beast</p>
+           <p>Heritage Audo Neve 1073 with EQ</p>
+           <p>Audient ASP880 with 8 channels</p>
+           <p>Avalon U5 Direct Box</p>
+           <p>MCI JH600 channels</p>
+      </div>
+  </div>
+
+</section>
+</article>
+</main>
+{{/post}}

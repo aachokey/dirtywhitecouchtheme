@@ -1,0 +1,51 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+<header class="main-header tag-head {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <div class="vertical">
+        <div class="main-header-content inner">
+          {{> navigation}}
+        </div>
+    </div>
+</header>
+{{#post}}
+
+<main class="content overlap-top" role="main">
+	<article class="{{post_class}} shadowbox">
+
+	<header class="post-header text-center">
+	    <h3 class="post-title" style="color:#f79766">Contact Us</h3>
+			<p>elis por molorem quid ut as non rerum endelec tatur, consedis ra quiaturiam, cum eium vo-Explitam, cuptus, temolendit, occae quos reriam vit harchil magniscimus.</p>
+	</header>
+
+	<div class="col-1-2">
+	<form action="//formspree.io/achokey21@gmail.com"
+	      method="POST" class="contact-form">
+	    <input type="text" name="name" placeholder="Your name">
+	    <input type="email" name="_replyto" placeholder="Your email">
+	    <textarea name="message" rows="9" cols="20"></textarea>
+	    <input type="hidden" name="_subject" value="New message from the website!" />
+	    <input type="text" name="_gotcha" style="display:none">
+	    <input type="submit" class="submit" value="Send">
+	</form>
+	</div>
+
+	<div class="col-1-2">
+		<iframe src="https://mapsengine.google.com/map/embed?mid=z5ngPsFnBwu0.kK_Q_BtnBsH8" width="100%" height="250"></iframe>
+		<ul style="list-style:none;">
+			<li><i class="fa fa-phone fa-1x" style="margin-top: 10px"></i> <small>574-339-8353</small></li>
+			<li><i class="fa fa-envelope fa-1x" style="margin-top: 10px"></i> <small>dirtywhitecouchstudio@yahoo.com</small></li>
+			<li><i class="fa fa-map-marker fa-1x" style="margin-top: 10px"></i> <small>50581 Weeping Willow Run E, Granger, IN 46530</small></li>
+		</ul>
+	</div>
+
+	<section class="post-content">
+	{{content}}
+	</section>
+
+	</article>
+</main>
+{{/post}}

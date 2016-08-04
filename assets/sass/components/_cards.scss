@@ -1,0 +1,100 @@
+.card {
+  position: relative;
+  color: white;
+  background-color: $black;
+  border-bottom: solid 8px $orange;
+  margin: 0 auto;
+  margin-top: 20px;
+  h3, h4, h5 {
+    color: white;
+  }
+}
+
+.card-head {
+  width: 100%;
+  height:120px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card-image {
+  display: block;
+  position: relative;
+  float: left;
+  background-size: cover;
+  background-position: center bottom;
+  height: 100%;
+}
+
+.card-image img {
+  height:100%;
+  padding: 0;
+}
+
+.card-info {
+  display: block;
+  position: relative;
+  width: 80%;
+  margin-left: 100px;
+}
+
+.card-action {
+  position: absolute;
+  background-color: $orange; 
+  color: white;
+  height:30px;
+  padding:0 5px 0 5px;
+  right:0;
+  bottom:0;
+  overflow: hidden;
+}
+
+.flipped {
+  animation: flip .5s;
+  animation-fill-mode: forwards;
+}
+
+.card-content {
+  display:none;
+  width: 100%;
+  background-color: $black;
+  box-sizing: border-box;
+  padding:0 20px 20px 20px;
+  margin-bottom: 30px;
+
+}
+
+@media only screen and (max-width: 720px) {
+  .card-head {
+    height: auto;
+    padding-bottom: 0;
+  }
+  .card-head, .card-content {
+    text-align: center;
+  }
+  .card-info {
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .card-image {
+    float: none;
+    height: 60px;
+  }
+  .card-image img {
+    width: auto;
+  }
+}
+
+
+@keyframes flip {
+    from {
+    }
+    to {
+        -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+    }
+}

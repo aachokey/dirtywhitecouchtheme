@@ -1,0 +1,47 @@
+// Sets variables for the project
+
+
+// Fonts -------------------
+
+// Load in Noto Sans
+@font-face {
+    font-family: 'Noto Sans';
+    src: url("../fonts/notosans-regular.eot");
+    src: url("../fonts/notosans-regular.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/notosans-regular.woff") format('woff'),
+         url("../fonts/notosans-regular.ttf") format('truetype');
+    font-style: normal;
+}
+
+// Load in Lora 
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  src: url('../fonts/lora-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lora-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lora-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lora-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lora-regular.svg#Lora') format('svg'); /* Legacy iOS */
+}
+
+$headerfont: 'Noto Sans', sans-serif;;
+$bodytext: 'Lora', serif;
+$descriptiontext: Arial, sans-serif;
+
+
+// Colors -------------------
+$text-color: #000;
+$orangeheadings: #f25b2a;
+$greenishblack: #363636;
+$background-color: #dfe0e1;
+$containerfill: #fff;
+$linkcolor: #4A4A4A;
+$linkcolor-hover: #111;
+$metacolor: #9EABB3;
+$cream: #fdeacd;
+$orange: #f79766;
+$black: #363636;
+
+
+// Background images -------------------
+$bg-footer: "{{asset images/footer.png}}";

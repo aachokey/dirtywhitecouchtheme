@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="{{asset "images/favicon-16x16.png"}}" sizes="16x16" type="image/png">
+    <link rel="icon" href="{{asset "images/favicon-32x32.png"}}" sizes="32x32" type="image/png">
+    <link rel="icon" href="{{asset "images/favicon-96x96.png"}}" sizes="96x96" type="image/png">
+
+    {{!-- Styles --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/swiper.min.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/output.css"}}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    {{!-- Ghost outputs important style and meta data with this tag --}}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    <div class="site-wrapper">
+        {{!-- Mobile navigation is separate from navigation.hbs --}}
+        <div class="mobile-nav">
+            <a href="{{@blog.url}}">Dirty White Couch Studio</a>
+            <span class="menuButton" id="overlay-menu"><i class="fa fa-bars"></i></span>
+        </div>
+        <div class="overlay overlay-data">
+          <a class="overlay-close"><i class="fa fa-times fa-2x"></i></a>
+          <nav>
+            <ul>
+                 <li class="nav-home" role="presentation"><a href="/#">Home</a></li>
+                 <li class="nav-about" role="presentation"><a href="/studio">Studio</a></li>
+                 <li class="nav-work" role="presentation"><a href="/listen">Listen</a></li>
+                 <li class="nav-blog" role="presentation"><a href="/tag/blog">Blog</a></li>
+                 <li class="nav-contact" role="presentation"><a href="/contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+    {{!-- Everything else gets inserted here --}}
+    {{{body}}}
+    </div>
+
+    {{> footer}}
+
+    {{!-- Ghost outputs important scripts and data with this tag --}}
+    {{ghost_foot}}
+
+    {{!-- The main JavaScript files --}}
+    <script type="text/javascript" src="{{asset "js/vendor.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script>        
+    var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        loop: true,
+        autoplayDisableOnInteraction: false
+    });
+    </script>
+</body>
+</html>

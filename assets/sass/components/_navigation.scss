@@ -1,0 +1,226 @@
+//
+// Navigation: CSS changes for navigation menu
+// --------------------------------------------------
+
+// Hide the overlay and mobile stuff normally
+
+.overlay, .overlay-data, .mobile-nav, #nav-logo {
+	display: none;
+}
+
+// Basic styles for the nav element
+nav {
+	width: 100%;
+	position: relative;
+	text-align: center;
+	-moz-transition: background-color 0.3s, font-size 0.3s ease;
+	-webkit-transition: background-color 0.3s, font-size 0.3s ease;
+	-o-transition: background-color 0.3s, font-size 0.3s ease;
+	-ms-transition: background-color 0.3s, font-size 0.3s ease;
+	transition: background-color 0.3s, font-size 0.3s ease;
+	z-index: 3;
+}
+
+.main-nav > ul {
+	position: relative;
+	list-style: none;
+	text-align: center;
+	background-color: $black;
+
+}
+
+	.main-nav > ul > li {
+		display: inline-block;
+		width: 13%;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+	}
+
+
+		nav > ul > li a {
+			color: white;
+			font-family: $headerfont;
+			font-size: 1em;
+			display: inline-block;
+			text-decoration: none;
+			-moz-transition: all 0.3s ease;
+			-webkit-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			-ms-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+		}
+
+			nav > ul > li a:hover {
+				color: $orange;
+			}
+
+// Styles only for the nav with the scroll effect on homepage
+
+.home-template {
+	.main-nav {
+		position: absolute;
+		bottom: 0;
+	}
+
+	.main-nav > ul {
+		background-color: rgba(0, 0, 0, .8);
+	}
+	.nav-scrolled {
+		position: fixed;
+		top: 0;
+		bottom: auto;
+		background-color: $black;
+		-moz-transition: background-color 0.3s ease;
+		-webkit-transition: background-color 0.3s ease;
+		-o-transition: background-color 0.3s ease;
+		-ms-transition: background-color 0.3s ease;
+		transition: background-color 0.3s ease;
+	}
+
+	.nav-scrolled > ul > li a {
+		color: white;
+		font-size: 0.8em;
+		-moz-transition: all 0.3s ease;
+		-webkit-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+
+	}
+
+	.nav-scrolled > ul > li a:hover {
+	color: $orange;
+	}
+}
+
+// Styles for the nav on all other pages
+.tag-head {
+	.main-nav ul {
+		background-color: transparent;
+		margin-top: 3vh;
+	}
+
+	.main-nav ul li {
+		vertical-align: middle;
+	}
+
+	.main-nav #nav-logo {
+		display: inline-block;
+		height: auto;
+		width: auto;
+
+	}
+	#nav-logo img {
+		height: 100px;
+		width: auto;
+		margin-top: 0;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+    .tag-head {
+        .main-nav ul {
+            margin-top: 0;
+        }
+        #nav-logo img {
+            height: 100px;
+        }
+    }
+}
+
+@media only screen and (max-width: 673px) {
+	.tag-head {
+		background-image: none;
+	}
+	.main-nav {
+			display: none;
+		}
+
+	.mobile-nav {
+		display: block;
+		position: fixed;
+		width: 100%;
+		font-family: 'Courgette', cursive;
+		font-size: .8em;
+		padding: 10px;
+		background-color: $black;
+		text-align: left;
+	    z-index: 999;
+		a {
+			text-decoration: none;
+			color: white;
+		}
+	}
+
+// Styles for the overlay mobile menu
+	.menuButton {
+		color: white;
+		float: right;
+		margin-right: 20px;
+		// border: 2px solid white;
+		padding: 0px 10px;
+		// border-radius: 5px;
+	}
+	.menuButton:hover {
+	  background-color: #474747;
+	}
+	.menuButton:active {
+	  position: relative;
+	  top: 1px;
+	}
+	.overlay {
+	display: block;
+	  position: fixed;
+	  width: 100%;
+	  height: 100%;
+	  top: 0;
+	  left: 0;
+	  background: $black;
+	  z-index: 99999;
+	}
+	.overlay nav {
+	  text-align: center;
+	  position: relative;
+	  top: 10vh;
+	  height: 60%;
+	  font-size: 2em;
+	  background-color: none;
+	}
+	.overlay ul {
+	  list-style: none;
+	  padding: 0;
+	  margin: 0 auto;
+	  height: 100%;
+	  position: relative;
+	}
+	.overlay ul li {
+	  height: 20%;
+	  display: block;
+	}
+
+	.overlay ul li a {
+	  font-weight: bold;
+	  text-decoration: none;
+	  display: block;
+	  color: white;
+	}
+	.overlay-close {
+	  position: absolute;
+	  right: 10px;
+	  top: 10px;
+	}
+	.overlay-data {
+	  opacity: 0;
+	  visibility: hidden;
+	  -webkit-transition: opacity 0.5s;
+	  transition: opacity 0.5s;
+	  visibility: 0s 0.5s;
+	  transition: opacity 0.5s, visibility 0s 0.5s;
+	}
+	.overlay-open {
+	  opacity: 1;
+	  visibility: visible;
+	  -webkit-transition: opacity 0.5s;
+	  transition: opacity 0.5s;
+	}
+}
