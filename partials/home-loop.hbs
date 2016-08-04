@@ -15,11 +15,11 @@
 	{{#foreach posts}}
 		{{#has tag="Blog"}}
 			{{#if @first}}
-				<div class="col-2-3 overlap-top">
+				<div class="col-2-3">
 				    <header class="post-header">
 				        <h3 class="post-title"><a href="{{url}}">{{{title}}}</a></h3>
 				        {{#author}}
-				            <i><p>By <a href="{{url}}" class="author">{{name}}</a> on <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time></p></i>
+				            <p>By <a href="{{url}}" class="author">{{name}}</a> on <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time></p>
 				        {{/author}}
 				    </header>
 				    <p>{{excerpt words="45"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
@@ -30,7 +30,7 @@
 				    <header class="post-header">
 				        <h6 class="post-title"><a href="{{url}}">{{{title}}}</a></h6>
 				        {{#author}}
-				            <i><p>By <a href="{{url}}" class="author">{{name}}</a> on <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time></p></i>
+				           	<p>By <a href="{{url}}" class="author">{{name}}</a> on <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time></p>
 				        {{/author}}
 				    </header>
 				    <p>{{excerpt words="15"}} <a class="read-more" href="{{url}}">&raquo;</a></p>

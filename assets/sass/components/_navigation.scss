@@ -143,7 +143,8 @@ nav {
 		font-family: 'Courgette', cursive;
 		font-size: .8em;
 		padding: 10px;
-		background-color: $black;
+		top:0;
+		background-color: black;
 		text-align: left;
 	    z-index: 999;
 		a {
@@ -175,7 +176,7 @@ nav {
 	  height: 100%;
 	  top: 0;
 	  left: 0;
-	  background: $black;
+	  background: black;
 	  z-index: 99999;
 	}
 	.overlay nav {
